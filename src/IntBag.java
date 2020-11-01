@@ -139,6 +139,10 @@ public class IntBag {
         Iterator IntBagIterator;
         IntBagIterator = new IntBagIterator( this );
         return IntBagIterator;
+    }
 
+    public Iterator iterator( int m ){
+        Iterator IntBagStepIterator = new IntBagStepIterator( m, this);
+        return IntBagStepIterator;
     }
 }

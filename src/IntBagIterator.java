@@ -1,16 +1,16 @@
 import java.util.Iterator;
 
 public class IntBagIterator implements Iterator {
-    IntBag aBag;
-    static int index;
+    private IntBag aBag;
+    private static int index;
 
     public IntBagIterator( IntBag bag ){
-    aBag = bag;
+        aBag = bag;
     }
 
     @Override
     public boolean hasNext() {
-        if(index < aBag.arraySize() ){
+        if( index < aBag.arraySize() ){
             return true;
         }
         return false;
