@@ -4,6 +4,10 @@ public class IntBagIterator implements Iterator {
     private IntBag aBag;
     private static int index;
 
+    /**
+     * Creates a bag
+     * @param bag
+     */
     public IntBagIterator( IntBag bag ){
         aBag = bag;
     }

@@ -5,12 +5,20 @@ public class IntBagStepIterator extends IntBagIterator {
     private IntBag aBag;
     private static int index = 0 ;
 
+    /**
+     * Creates a step iterator
+     * @param m Step number
+     * @param bag IntBag bag
+     */
     public IntBagStepIterator( int m, IntBag bag ){
-        super(bag);//WHATS THE POINT OF THIS.
+        super(bag);
         this.m = m;
-        aBag = bag;//WHY CANT SUPER(BAG) DO THIS? WHAT'S THE DIFFERENCE??
+        aBag = bag;
     }
 
+    /**
+     * @return Returns the next object in the bag.
+     */
     public Object next(){
         if( super.hasNext() ){
            index += m;
@@ -23,6 +31,9 @@ public class IntBagStepIterator extends IntBagIterator {
     }
 
     @Override
+    /**
+     * @return boolean Check if the bag has a next object.
+     */
     public boolean hasNext() {
         if( index < aBag.arraySize()){
             return true;
